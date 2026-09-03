@@ -84,7 +84,7 @@ function Header({ ready }: { ready: boolean }) {
   );
 }
 
-function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+function Reveal({ children, className = "", delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const visible = useInView(ref, { once: true, margin: "-12%" });
   const reduced = useReducedMotion();
@@ -123,7 +123,7 @@ function Services() {
   return <section id="services" className="bg-deep px-5 py-28 text-hero md:px-10 md:py-40"><div className="mx-auto max-w-[1600px]"><div className="mb-14 grid gap-6 md:grid-cols-2"><Reveal><div className="eyebrow text-gold"><span/>What we do</div><h2 className="section-title mt-6">OUR<br/><em>EXPERTISE</em></h2></Reveal><p className="max-w-md self-end text-copy-dark md:justify-self-end">A complete approach to residential roofing—from a clear first assessment to a carefully finished installation.</p></div><div className="grid border-t border-line-dark md:grid-cols-2">{services.map(([number,title,copy], index) => <motion.article key={number} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .35 }} transition={{ duration: .75, delay: (index % 2) * .08, ease }} className="service-item group"><span className="font-meta text-xs text-gold">{number}</span><div><h3 className="font-display text-3xl uppercase md:text-4xl">{title}</h3><p className="service-copy">{copy}</p></div><ArrowRight className="service-arrow" aria-hidden="true"/></motion.article>)}</div></div></section>;
 }
 
-function ClipFigure({ from, className, delay = 0, cursor, children }: { from: string; className: string; delay?: number; cursor?: string; children: React.ReactNode }) {
+function ClipFigure({ from, className, delay = 0, cursor, children }: { from: string; className: string; delay?: number; cursor?: string; children: ReactNode }) {
   const ref = useRef<HTMLElement>(null);
   const visible = useInView(ref, { once: true, margin: "-10% 0px" });
   const reduced = useReducedMotion();
