@@ -109,7 +109,7 @@ function Hero({ ready }: { ready: boolean }) {
           <motion.p variants={{ hidden: { opacity: 0, y: 22 }, show: { opacity: 1, y: 0, transition: { duration: .85, ease } } }} className="mt-7 max-w-xl text-base leading-7 text-copy-dark md:text-lg">Premium roofing craftsmanship in Clarksville, TN — built with precision, protection and pride.</motion.p>
           <motion.div variants={{ hidden: { opacity: 0, y: 22 }, show: { opacity: 1, y: 0, transition: { duration: .85, ease } } }} className="mt-8 flex flex-col gap-3 sm:flex-row"><a href={`tel:${PHONE}`} className="cta-primary"><Phone size={16}/>Call now for your free estimate<ArrowRight size={17}/></a><a href="#work" className="cta-secondary">Explore our work<ArrowDown size={17}/></a></motion.div>
         </motion.div>
-        <motion.div initial={{ opacity: 0 }} animate={ready ? { opacity: 1 } : {}} transition={{ delay: 1.5, duration: 1 }} className="mt-12 flex items-end justify-between border-t border-hero/20 pt-5 font-meta text-[10px] uppercase tracking-[0.2em]"><span>Clarksville, TN</span><span className="hidden items-center gap-2 text-copy-dark sm:flex"><span className="h-7 w-px bg-gold"/>Scroll to discover</span></motion.div>
+        <motion.div initial={{ opacity: 0 }} animate={ready ? { opacity: 1 } : {}} transition={{ delay: 1.5, duration: 1 }} className="mt-8 flex items-end justify-between border-t border-hero/20 pt-4 font-meta text-[10px] uppercase tracking-[0.2em] md:mt-12 md:pt-5"><span>Clarksville, TN</span><span className="hidden items-center gap-2 text-copy-dark sm:flex"><span className="h-7 w-px bg-gold"/>Scroll to discover</span></motion.div>
       </div>
     </section>
   );
