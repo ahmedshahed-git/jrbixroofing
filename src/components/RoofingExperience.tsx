@@ -102,7 +102,7 @@ function Hero({ ready }: { ready: boolean }) {
         {!reduced && <video className="h-full w-full object-cover" autoPlay muted loop playsInline poster={heroImage} aria-hidden="true"><source src={heroVideo.url} type="video/mp4" /></video>}
         {reduced && <img src={heroImage} alt="Premium charcoal roof with copper flashing at golden hour" className="h-full w-full object-cover" width={1920} height={1088}/>}<div className="hero-overlay"/>
       </motion.div>
-      <div className="relative mx-auto flex min-h-[100svh] max-w-[1600px] flex-col justify-end px-5 pb-8 pt-32 md:px-10 md:pb-10">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-[1600px] flex-col justify-end px-5 pb-8 pt-28 md:px-10 md:pb-9">
         <motion.div initial="hidden" animate={ready ? "show" : "hidden"} variants={{ hidden: {}, show: { transition: { staggerChildren: .12, delayChildren: .25 } } }} className="max-w-6xl">
           <motion.div variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: { duration: .75, ease } } }} className="eyebrow text-gold"><span/>JR BIX ROOFING</motion.div>
           <div className="mt-5 overflow-hidden"><motion.h1 variants={{ hidden: { y: "110%" }, show: { y: 0, transition: { duration: 1.15, ease } } }} className="font-display text-[clamp(3.65rem,10.4vw,10rem)] leading-[.82] tracking-normal">ROOFING BUILT<br/><em className="font-normal">TO LAST.</em></motion.h1></div>
